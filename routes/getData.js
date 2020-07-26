@@ -4,10 +4,11 @@ const getGithubData = require("../middleware/getGithubData");
 
 const router = express.Router();
 
-router.post("/getGithubData", async (req, res) => {
+router.post("/getGithubData/:page", async (req, res) => {
   try {
-    const params = req.body;
-    const data = await getGithubData(params);
+    const args = req.body;
+    args.page = req.params.page;
+    const data = await getGithubData(args);
     res.send(data);
   } catch (error) {
     res.status(400).send(error);

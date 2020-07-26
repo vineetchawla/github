@@ -8,8 +8,9 @@ const getGithubData = async ({
   sort = "stars",
   order = "desc",
   date = "2019-01-10",
+  page = 1,
 }) => {
-  const url = `https://api.github.com/search/repositories?q=created:>${date}&sort=${sort}&order=${order}&per_page=${per_page}`;
+  const url = `https://api.github.com/search/repositories?q=created:>${date}&sort=${sort}&order=${order}&per_page=${per_page}&page=${page}`;
   const cachedValue = cache.get(url);
   if (cachedValue) {
     console.log("sending value from cache");
