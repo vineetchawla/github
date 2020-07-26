@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const app = express();
-const port = process.env.PORT || 3000;
 
 const getDataRoute = require("./routes/getData");
 
@@ -15,6 +14,4 @@ app.get("/", (req, res) => {
 
 app.use(getDataRoute);
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+module.exports = app;

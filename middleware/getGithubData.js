@@ -1,4 +1,4 @@
-const axios = require("axios").default;
+const axios = require("axios");
 const cache = require("memory-cache");
 
 const cacheStaleTime = 1000 * 60 * 1;

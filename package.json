@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Vineet Chawla",
   "license": "ISC",
@@ -15,5 +15,10 @@
     "express": "^4.17.1",
     "memory-cache": "^0.2.0",
     "mongoose": "^5.9.20"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0",
+    "jest-mock-axios": "^4.2.1",
+    "supertest": "^4.0.2"
   }
 }
