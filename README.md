@@ -5,6 +5,7 @@
 1. Added the necessary API endpoint.
 2. Added docker-compose and dockerfile. Server should start just with "docker-compose up" at localhost:3000
 3. Added some sample integration tests for routes and a unit test for helper
+4. Added cache support for faster performance
 
 ### Route
 
