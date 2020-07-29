@@ -11,7 +11,8 @@ router.post("/getGithubData/:page", async (req, res) => {
     const data = await getGithubData(args);
     res.send(data);
   } catch (error) {
-    res.status(400).send(error);
+    console.log(error);
+    res.status(400).send({ error: "Problem fetching data" });
   }
 });
 
